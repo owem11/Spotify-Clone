@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <!-- Font Awesome for UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header role="banner">
+        <div class="logo">
+            <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Full_Logo_RGB_White.png" alt="Spotify Logo">
+        </div>
+        
+        <div class="search" role="search">
+            <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+            <input type="text" placeholder="What do you want to play?" aria-label="Search music, artists, or podcasts">
+        </div>
+
+        <nav role="navigation" aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="#featured">Premium</a></li>
+                <li><a href="#browse">Support</a></li>
+                <li><a href="#playlistGrid">Download</a></li>
+                <li class="divider" aria-hidden="true">|</li>
+                <li><a href="#signup">Sign up</a></li>
+                <li><a href="#login" class="btn-login">Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Views -->
+    <main id="main-content" role="main">
+
+        <!-- 1. Featured Section -->
+        <section id="featured" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Playlists</h2>
+            <div class="card-grid">
+                <article class="playlist-card" tabindex="0">
+                    <div class="img-container">
+                        <img src="card-1.png" alt="Cover art for Today's Top Hits playlist">
+                        <button class="play-btn" aria-label="Play Today's Top Hits"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Today's Top Hits</h3>
+                        <p>Sabrina Carpenter is on top of the Hottest 50!</p>
+                    </div>
+                    <button class="options-btn" aria-label="Playlist options" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="menuitem"><a href="#">Add to Library</a></li>
+                        <li role="menuitem"><a href="#">Share Playlist</a></li>
+                    </ul>
+                </article>
+
+                <article class="playlist-card" tabindex="0">
+                    <div class="img-container">
+                        <img src="card-2.png" alt="Cover art for Discover Weekly playlist">
+                        <button class="play-btn" aria-label="Play Discover Weekly"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="card-info">
+                        <h3>Discover Weekly</h3>
+                        <p>Your weekly mixtape of fresh music tailored for you.</p>
+                    </div>
+                    <button class="options-btn" aria-label="Playlist options" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="menuitem"><a href="#">Add to Library</a></li>
+                        <li role="menuitem"><a href="#">Share Playlist</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- 2. Playlist Grid Section -->
+        <section id="playlistGrid" aria-labelledby="grid-heading">
+            <h2 id="grid-heading">Made For You</h2>
+            <div class="card-grid">
+                <article class="playlist-card" tabindex="0">
+                    <div class="img-container">
+                        <img src="the-wall.jpg" alt="Cover art for Chill Hits playlist">
+                        <button class="play-btn" aria-label="Play Chill Hits"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="title">Rock</h3>
+                        <p class="creator">By Spotify • 120 Songs</p>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+        <!-- 3. Playlist Detail View -->
+        <section id="playlistDetail" aria-labelledby="detail-heading">
+            <div class="header">
+                <img src="nirvana.png" alt="Cover art for Rock Classics playlist">
+                <div class="info">
+                    <span class="type">PLAYLIST</span>
+                    <h1 id="detail-heading">Rock Classics</h1>
+                    <p class="description">Rock legends & epic songs that continue to inspire generations.</p>
+                    <div class="meta">
+                        <span class="author">Spotify</span> • 2,450,119 likes • 85 songs, 5 hr 45 min
+                    </div>
+                </div>
+            </div>
+
+            <div class="tracklist" role="table" aria-label="Track list">
+                <div class="tracklist-row header-row" role="row">
+                    <span role="columnheader">#</span>
+                    <span role="columnheader">Title</span>
+                    <span role="columnheader">Album</span>
+                    <span role="columnheader"><i class="fa-regular fa-clock" aria-label="Duration"></i></span>
+                </div>
+                <div class="tracklist-row" role="row" tabindex="0">
+                    <span role="cell" class="track-num">1</span>
+                    <span role="cell" class="track-title-group">
+                        <span class="track-name">Heart-SHaped Box</span>
+                        <span class="track-artist">Nirvana</span>
+                    </span>
+                    <span role="cell" class="track-album">In Utero</span>
+                    <span role="cell" class="track-duration">4:41</span>
+                </div>
+                <div class="tracklist-row" role="row" tabindex="0">
+                    <span role="cell" class="track-num">1</span>
+                    <span role="cell" class="track-title-group">
+                        <span class="track-name">Rape me</span>
+                        <span class="track-artist">Nirvana</span>
+                    </span>
+                    <span role="cell" class="track-album">In Utero</span>
+                    <span role="cell" class="track-duration">4:41</span>
+                </div>
+                <div class="tracklist-row" role="row" tabindex="0">
+                    <span role="cell" class="track-num">1</span>
+                    <span role="cell" class="track-title-group">
+                        <span class="track-name">I Wanna Be Adored - Remastered 2009</span>
+                        <span class="track-artist">The Stone Roses</span>
+                    </span>
+                    <span role="cell" class="track-album">The Stone Roses</span>
+                    <span role="cell" class="track-duration">4:52</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Browse Section -->
+        <section id="browseSection" aria-labelledby="browse-heading">
+            <h2 id="browse-heading">Browse All</h2>
+            <div class="genreGrid">
+                <div class="genreCard pop" tabindex="0">
+                    <h3 class="title">Pop</h3>
+                    <img src="card-1.png" alt="Pop genre cover decorative element">
+                </div>
+                <div class="genreCard hiphop" tabindex="0">
+                    <h3 class="title">Alt-Rock</h3>
+                    <img src="stone-roses.jpg" alt="Hip-Hop genre cover decorative element">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed Bottom Audio Player -->
+    <footer id="musicPlayer" role="contentinfo" aria-label="Media Player">
+        <div class="player-left">
+            <img src="nirvana.png" alt="Current playing album cover">
+            <div class="track-details">
+                <a href="#" class="now-playing-title">Heart-SHaped Box</a>
+                <a href="#" class="now-playing-artist">Nirvana</a>
+            </div>
+        </div>
+
+        <div class="player-center">
+            <div class="player-controls">
+                <button aria-label="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+                <button aria-label="Previous Track"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="btn-play" aria-label="Play"><i class="fa-solid fa-play"></i></button>
+                <button aria-label="Next Track"><i class="fa-solid fa-forward-step"></i></button>
+                <button aria-label="Repeat"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="playback-bar">
+                <span class="progress-time">1:40</span>
+                <div class="progress-bar-bg" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar-fill" style="width: 40%;"></div>
+                </div>
+                <span class="progress-time">4:41</span>
+            </div>
+        </div>
+
+        <div class="player-right">
+            <button aria-label="Mute or adjust volume"><i class="fa-solid fa-volume-high"></i></button>
+            <div class="volume-bar-bg" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                <div class="volume-bar-fill" style="width: 70%;"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
